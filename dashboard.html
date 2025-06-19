@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard Pengguna - ExnessPro</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#0d0d0d] text-white font-sans">
+
+  <!-- Layout -->
+  <div class="min-h-screen flex">
+
+    <!-- Sidebar -->
+    <aside class="w-64 bg-black p-6 hidden md:block">
+      <h2 class="text-yellow-400 text-2xl font-bold mb-8">ExnessPro</h2>
+      <nav class="space-y-4">
+        <a href="#" class="block text-white hover:text-yellow-400">📊 Dashboard</a>
+        <a href="#" class="block text-white hover:text-yellow-400">💼 Akun Trading</a>
+        <a href="#" class="block text-white hover:text-yellow-400">📈 Riwayat Transaksi</a>
+        <a href="#" class="block text-white hover:text-yellow-400">⚙️ Pengaturan</a>
+        <a href="#" class="block text-red-500 mt-10 hover:text-red-400">🚪 Logout</a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 p-6 bg-[#1a1a1a]">
+      <h1 class="text-3xl font-bold text-yellow-400 mb-6">Selamat Datang, Tuan Cuan</h1>
+
+      <!-- Info Akun -->
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-black p-4 rounded-lg shadow-lg">
+          <h2 class="text-lg font-semibold text-yellow-400 mb-2">Saldo Akun</h2>
+          <p class="text-2xl font-bold">USD 2,000.00</p>
+        </div>
+        <div class="bg-black p-4 rounded-lg shadow-lg">
+          <h2 class="text-lg font-semibold text-yellow-400 mb-2">Leverage</h2>
+          <p class="text-2xl font-bold">1:2000</p>
+        </div>
+        <div class="bg-black p-4 rounded-lg shadow-lg">
+          <h2 class="text-lg font-semibold text-yellow-400 mb-2">Jenis Akun</h2>
+          <p class="text-2xl font-bold">Raw Spread</p>
+        </div>
+      </div>
+
+      <!-- Riwayat Trading -->
+      <div class="mt-10">
+        <h2 class="text-xl font-bold text-yellow-400 mb-4">Riwayat Trading Terakhir</h2>
+        <table class="w-full text-sm text-left text-gray-400">
+          <thead class="text-xs uppercase bg-[#262626] text-yellow-300">
+            <tr>
+              <th class="px-4 py-2">Tanggal</th>
+              <th class="px-4 py-2">Pair</th>
+              <th class="px-4 py-2">Tipe</th>
+              <th class="px-4 py-2">Lot</th>
+              <th class="px-4 py-2">Profit</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="bg-[#1e1e1e] border-b border-gray-700">
+              <td class="px-4 py-2">19 Jun 2025</td>
+              <td class="px-4 py-2">XAUUSD</td>
+              <td class="px-4 py-2 text-green-400">Buy</td>
+              <td class="px-4 py-2">1.0</td>
+              <td class="px-4 py-2 text-green-400">+200.00</td>
+            </tr>
+            <tr class="bg-[#1e1e1e] border-b border-gray-700">
+              <td class="px-4 py-2">18 Jun 2025</td>
+              <td class="px-4 py-2">EURUSD</td>
+              <td class="px-4 py-2 text-red-400">Sell</td>
+              <td class="px-4 py-2">0.5</td>
+              <td class="px-4 py-2 text-red-400">-50.00</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+
+  </div>
+</body>
+</html>
