@@ -3,58 +3,73 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Deposit - PRJA</title>
+  <title>exness - Akun Saya</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-white text-black font-sans">
   <!-- Header -->
-  <header class="flex justify-between items-center px-4 py-3 border-b border-gray-200">
+  <header class="flex justify-between items-center px-6 py-4 border-b border-gray-200">
     <h1 class="text-2xl font-bold text-gray-800">prja</h1>
-    <div class="flex items-center space-x-4">
+    <div class="flex items-center gap-4">
       <button class="text-gray-600 hover:text-black">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" /></svg>
       </button>
     </div>
   </header>
 
   <!-- Main -->
-  <main class="max-w-xl mx-auto p-6">
-    <h2 class="text-2xl font-semibold mb-6">💰 Deposit Dana</h2>
+  <main class="max-w-5xl mx-auto p-6">
+    <!-- Promo banners -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+      <div class="bg-green-100 p-4 rounded text-sm">✅ 2000+ strategi trading tersedia untuk diinvestasikan</div>
+      <div class="bg-red-100 p-4 rounded text-sm">🤝 Jadilah mitra dan dapatkan hingga 40% dari pendapatan kami</div>
+    </div>
 
-    <form class="space-y-4">
-      <!-- Nominal -->
-      <div>
-        <label class="block mb-1 font-medium">Jumlah Deposit (IDR)</label>
-        <input type="number" placeholder="Contoh: 100000" class="w-full border border-gray-300 rounded px-4 py-2" required>
+    <!-- Akun-akun saya -->
+    <h2 class="text-2xl font-semibold mb-2">Akun-akun saya</h2>
+    <div class="flex space-x-6 border-b border-gray-300 text-gray-500 mb-4">
+      <button class="pb-2 border-b-2 border-black text-black">Riil</button>
+      <button class="pb-2 hover:text-black">Demo</button>
+      <button class="pb-2 hover:text-black">Diarsipkan</button>
+    </div>
+
+    <div class="flex justify-between items-center mb-4">
+      <select class="border border-gray-300 px-3 py-1 rounded text-sm">
+        <option>Terbaru</option>
+        <option>Lama</option>
+      </select>
+      <button class="bg-gray-100 px-4 py-2 rounded text-sm">+ Buka akun</button>
+    </div>
+
+    <!-- Akun Box -->
+    <div class="border border-gray-300 rounded-lg p-4 bg-white shadow-sm">
+      <div class="flex items-center justify-between">
+        <div>
+          <span class="text-xs text-gray-500 mr-2">Riil</span>
+          <span class="text-xs text-gray-500 mr-2">Raw Spread</span>
+          <span class="text-sm font-semibold">#127597617 JONGGUN</span>
+        </div>
+        <div class="text-xl font-bold">2.153.000.00 IDR</div>
       </div>
 
-      <!-- Metode Pembayaran -->
-      <div>
-        <label class="block mb-1 font-medium">Metode Pembayaran</label>
-        <select class="w-full border border-gray-300 rounded px-4 py-2" required>
-          <option value="">Pilih metode</option>
-          <option>Transfer Bank Lokal</option>
-          <option>QRIS</option>
-          <option>Virtual Account</option>
-          <option>E-wallet (OVO, Dana, Gopay)</option>
-        </select>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mt-4 text-sm text-gray-600">
+        <div>Leverage sebenarnya: <span class="text-black">1:Tanpa Batas</span></div>
+        <div>Free margin: <span class="text-black">2.153.000.00 IDR</span></div>
+        <div>Leverage maksimum: <span class="text-black">1:Tanpa Batas</span></div>
+        <div>Ekuitas: <span class="text-black">0.00 IDR</span></div>
+        <div>P/L Mengambang: <span class="text-black">0.00 IDR</span></div>
+        <div>Platform: <span class="text-black">MT5</span></div>
       </div>
 
-      <!-- Nama Pemilik Rekening -->
-      <div>
-        <label class="block mb-1 font-medium">Nama Pemilik Rekening</label>
-        <input type="text" class="w-full border border-gray-300 rounded px-4 py-2" placeholder="Nama sesuai rekening" required>
+      <div class="flex items-center space-x-2 mt-4">
+        <button class="bg-yellow-400 text-black px-4 py-1 rounded font-semibold text-sm">⚙️ Trade</button>
+        <button class="border border-gray-300 px-4 py-1 rounded text-sm">💰 Deposit</button>
+        <button class="border border-gray-300 px-4 py-1 rounded text-sm">📤 Tarik</button>
       </div>
 
-      <!-- Tombol Submit -->
-      <div>
-        <button type="submit" class="w-full bg-yellow-400 text-black font-semibold py-2 rounded hover:bg-yellow-500">Lanjutkan Deposit</button>
+      <div class="mt-4 text-xs text-gray-500">
+        Server: Exness-MT5Real7 | MT5 login: 127597617 | 🔒 Ubah kata sandi trading
       </div>
-    </form>
-
-    <!-- Info Tambahan -->
-    <div class="mt-6 text-sm text-gray-500">
-      Setelah menekan "Lanjutkan Deposit", Anda akan diarahkan ke halaman pembayaran sesuai metode yang dipilih.
     </div>
   </main>
 </body>
