@@ -36,6 +36,12 @@
       border-bottom: 2px solid black;
       font-weight: bold;
     }
+    .account-section, .transaction-section {
+      display: none;
+    }
+    .active-section {
+      display: block;
+    }
     .account-section {
       background: #fff;
       border: 1px solid #ddd;
@@ -94,11 +100,73 @@
       gap: 15px;
       align-items: center;
     }
+    .transaction-section {
+      margin: 20px;
+    }
+    .transaction-section h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    .filter-bar {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .filter-bar select, .filter-bar button {
+      padding: 6px 10px;
+      font-size: 14px;
+    }
+    .transaction-box {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 10px;
+    }
+    .transaction-box.success {
+      border-left: 4px solid green;
+    }
+    .transaction-box.failed {
+      border-left: 4px solid red;
+    }
+    .transaction-box.pending {
+      border-left: 4px solid orange;
+    }
+    .transaction-detail {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 14px;
+    }
+    .status-success {
+      color: green;
+      font-weight: bold;
+    }
+    .status-failed {
+      color: red;
+      font-weight: bold;
+    }
+    .status-pending {
+      color: orange;
+      font-weight: bold;
+    }
+    .back-btn {
+      margin-bottom: 20px;
+      cursor: pointer;
+      color: blue;
+      text-decoration: underline;
+    }
   </style>
+  <script>
+    function showSection(section) {
+      document.querySelector('.account-section').classList.remove('active-section');
+      document.querySelector('.transaction-section').classList.remove('active-section');
+      document.querySelector('.' + section).classList.add('active-section');
+    }
+  </script>
 </head>
 <body>
   <div class="header">
-    <h1>Akun-akun saya</h1>
+    <h1>Exness</h1>
     <button>+ Buka akun</button>
   </div>
 
@@ -108,37 +176,110 @@
     <div>Diarsipkan</div>
   </div>
 
-  <div style="padding: 0 20px; margin-bottom: 10px;">
-    <select>
-      <option>Terbaru</option>
-    </select>
-  </div>
-
-  <div class="account-section">
+  <div class="account-section active-section">
+    <div style="padding: 0 20px; margin-bottom: 10px;">
+      <select>
+        <option>Terbaru</option>
+      </select>
+    </div>
     <div class="account-header">
       <span class="tag">Rill</span>
       <span class="tag">Raw Spread</span>
       <span>#127597617 JONGGUN</span>
     </div>
-
     <div class="balance">2.172.603,42 IDR</div>
-
     <div class="button-group">
       <button class="trade-btn">⚙️ Trade</button>
       <button class="grey-btn">⬇️ Deposit</button>
-      <button class="grey-btn">⬆️ Tarik</button>
+      <button class="grey-btn" onclick="showSection('transaction-section')">⬆️ Tarik</button>
     </div>
-
     <table class="info-table">
       <tr><td>Leverage sebenarnya</td><td>: 1:Tanpa Batas</td><td>Free margin</td><td>: 0.00 IDR</td></tr>
       <tr><td>Leverage maksimum</td><td>: 1:Tanpa Batas</td><td>Ekuitas</td><td>: 0.00 IDR</td></tr>
       <tr><td>P/L Mengambang</td><td>: 0.00 IDR</td><td>Platform</td><td>: MT5</td></tr>
     </table>
-
     <div class="footer-info">
       <span>Server: <b>Exness-MT5Real7</b></span>
       <span>MT5 login: <b>127597617</b></span>
       <span>✏️ Ubah kata sandi trading</span>
+    </div>
+  </div>
+
+  <div class="transaction-section">
+    <div class="back-btn" onclick="showSection('account-section')">← Kembali ke akun</div>
+    <h2>Riwayat transaksi</h2>
+    <div class="filter-bar">
+      <button>📅 7 Hari terakhir</button>
+      <select><option>Semua jenis transaksi</option></select>
+      <select><option>Semua status</option></select>
+      <select><option>Semua akun</option></select>
+    </div>
+    <div><strong>Hari ini, 19 Juni 2025</strong></div>
+    <div class="transaction-box success">
+      <div class="transaction-detail">
+        <div>
+          <div>Penarikan - 19 Jun, 12:51</div>
+          <div>ID Invois 1317365383</div>
+        </div>
+        <div>
+          <div>➡️ Internet Banking</div>
+          <div>- 200.000,00 IDR</div>
+          <div class="status-success">● Terkirim</div>
+        </div>
+      </div>
+    </div>
+    <div class="transaction-box pending">
+      <div class="transaction-detail">
+        <div>
+          <div>Penarikan - 19 Jun, 13:33</div>
+          <div>ID Invois 1316999999</div>
+        </div>
+        <div>
+          <div>➡️ Internet Banking</div>
+          <div>- 1.500.000,00 IDR</div>
+          <div class="status-pending">● Sedang diproses</div>
+        </div>
+      </div>
+    </div>
+    <div><strong>Juni 2025</strong></div>
+    <div class="transaction-box success">
+      <div class="transaction-detail">
+        <div>
+          <div>Penarikan - 17 Jun, 16:31</div>
+          <div>ID Invois 1317249569</div>
+        </div>
+        <div>
+          <div>➡️ Internet Banking</div>
+          <div>- 200.000,00 IDR</div>
+          <div class="status-success">● Terkirim</div>
+        </div>
+      </div>
+    </div>
+    <div class="transaction-box failed">
+      <div class="transaction-detail">
+        <div>
+          <div>Penarikan - 17 Jun, 16:29</div>
+          <div>ID Invois 1317249374</div>
+        </div>
+        <div>
+          <div>➡️ Internet Banking</div>
+          <div>- 200.000,00 IDR</div>
+          <div class="status-failed">● Ditolak</div>
+        </div>
+      </div>
+    </div>
+    <div class="transaction-box success">
+      <div class="transaction-detail">
+        <div>
+          <div>Penarikan - 16 Jun, 14:15</div>
+          <div>ID Invois 1317000000</div>
+        </div>
+        <div>
+          <div>➡️ Internet Banking</div>
+          <div>- 200.000,00 IDR</div>
+          <div class="status-success">● Terkirim</div>
+        </div>
+      </div>
     </div>
   </div>
 </body>
