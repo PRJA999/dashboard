@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exness - Akun-akun saya</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+      align-items: center;
+    }
+    .header h1 {
+      font-size: 24px;
+    }
+    .tabs {
+      display: flex;
+      padding: 0 20px;
+      gap: 20px;
+      font-size: 14px;
+      margin-bottom: 10px;
+      border-bottom: 2px solid #ccc;
+    }
+    .tabs div {
+      padding-bottom: 5px;
+      cursor: pointer;
+    }
+    .tabs .active {
+      border-bottom: 2px solid black;
+      font-weight: bold;
+    }
+    .account-section {
+      background: #fff;
+      border: 1px solid #ddd;
+      margin: 20px;
+      border-radius: 10px;
+      padding: 20px;
+    }
+    .account-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    .account-header .tag {
+      background: #f2f3f5;
+      padding: 3px 8px;
+      border-radius: 12px;
+      font-size: 12px;
+    }
+    .balance {
+      font-size: 32px;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+    .button-group {
+      display: flex;
+      gap: 10px;
+      margin: 15px 0;
+    }
+    .button-group button {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .trade-btn {
+      background: #ffd500;
+      font-weight: bold;
+    }
+    .grey-btn {
+      background: #f1f2f3;
+    }
+    .info-table {
+      width: 100%;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    .info-table td {
+      padding: 5px 0;
+    }
+    .footer-info {
+      font-size: 12px;
+      color: #444;
+      display: flex;
+      gap: 15px;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Akun-akun saya</h1>
+    <button>+ Buka akun</button>
+  </div>
+
+  <div class="tabs">
+    <div class="active">Rill</div>
+    <div>Demo</div>
+    <div>Diarsipkan</div>
+  </div>
+
+  <div style="padding: 0 20px; margin-bottom: 10px;">
+    <select>
+      <option>Terbaru</option>
+    </select>
+  </div>
+
+  <div class="account-section">
+    <div class="account-header">
+      <span class="tag">Rill</span>
+      <span class="tag">Raw Spread</span>
+      <span>#127597617 JONGGUN</span>
+    </div>
+
+    <div class="balance">2.172.603,42 IDR</div>
+
+    <div class="button-group">
+      <button class="trade-btn">⚙️ Trade</button>
+      <button class="grey-btn">⬇️ Deposit</button>
+      <button class="grey-btn">⬆️ Tarik</button>
+    </div>
+
+    <table class="info-table">
+      <tr><td>Leverage sebenarnya</td><td>: 1:Tanpa Batas</td><td>Free margin</td><td>: 0.00 IDR</td></tr>
+      <tr><td>Leverage maksimum</td><td>: 1:Tanpa Batas</td><td>Ekuitas</td><td>: 0.00 IDR</td></tr>
+      <tr><td>P/L Mengambang</td><td>: 0.00 IDR</td><td>Platform</td><td>: MT5</td></tr>
+    </table>
+
+    <div class="footer-info">
+      <span>Server: <b>Exness-MT5Real7</b></span>
+      <span>MT5 login: <b>127597617</b></span>
+      <span>✏️ Ubah kata sandi trading</span>
+    </div>
+  </div>
+</body>
+</html>
